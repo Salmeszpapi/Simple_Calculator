@@ -71,7 +71,6 @@ void MainWindow::on_pushButton_11_clicked() //minus
 
 void MainWindow::on_pushButton_clicked() // equals
 {
-
     result +=ui->lcdNumber->value();
     ui->lcdNumber->display(result);
     counted=true;
@@ -189,7 +188,7 @@ void MainWindow::on_pushButton_14_clicked()//0
 void MainWindow::on_pushButton_16_clicked()
 {
     val="";
-    num=0;
+    result=0;
     ui->lcdNumber->display(val);
 }
 
