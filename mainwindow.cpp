@@ -60,18 +60,26 @@ void MainWindow::on_pushButton_11_clicked() //minus
     if(counted==true){
         val="";
     }
-    val="";
-    result =ui->lcdNumber->value();
-    mark="minus";
-    ui->lcdNumber->display("");
-    val+="-";
-    ui->lcdNumber->display(val);
+    if(mark=="multiply"){
+        val="";
+        ui->lcdNumber->display("");
+        val+="-";
+        ui->lcdNumber->display(val);
+    }else{
+        val="";
+        result =ui->lcdNumber->value();
+        mark="minus";
+        ui->lcdNumber->display("");
+        val+="-";
+        ui->lcdNumber->display(val);
+    }
+
 }
 
 
 void MainWindow::on_pushButton_clicked() // equals
 {
-    if(mark=="multiply" or mark=="minus"){
+    if(mark=="multiply"){
         result*=ui->lcdNumber->value();
         ui->lcdNumber->display(result);
         counted=true;
